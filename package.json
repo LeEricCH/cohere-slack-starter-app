@@ -1,0 +1,23 @@
+{
+  "name": "cohere-slack-starter-app",
+  "version": "0.0.1",
+  "description": "co:here : slack starter app",
+  "main": "bin/cohere-slack-starter-app.js",
+  "scripts": {
+    "serve": "nodemon bin/cohere-slack-starter-app.js",
+    "test": "yarn ava",
+    "test:watch": "yarn ava --watch"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@slack/bolt": "^3.9.0",
+    "JSONStream": "^1.3.5",
+    "axios": "^1.6.2",
+    "cohere-ai": "^7.6.2",
+    "dotenv": "^16.0.0",
+    "jsdom": "^19.0.0"
+  },
+  "devDependencies": {
+    "ava": "^4.0.1"
+  }
+}
