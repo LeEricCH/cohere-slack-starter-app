@@ -8,7 +8,6 @@ This project wraps https://github.com/slackapi/bolt-js. See official docs for de
 [![][github-forks-shield]][github-forks-link]
 [![][github-stars-shield]][github-stars-link]
 [![][github-issues-shield]][github-issues-link]
-[![][github-license-shield]][github-license-link]
 
 [Changelog](./CHANGELOG.md) · [Report Bug][github-issues-link] · [Request Feature][github-issues-link]
 
