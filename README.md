@@ -53,6 +53,15 @@ SLACK_APP_TOKEN=xapp-xxxxx
 SLACK_BOT_TOKEN=xoxb-xxxxx
 ```
 
+## Roadmap :world_map:
+
+- [ ] 📡 **Streaming Responses**: Implement real-time streaming for faster and more dynamic chat responses.
+- [ ] 👍 **User Feedback Integration**: Enable users to provide direct feedback on chat responses, enhancing AI learning and accuracy.
+- [ ] 💬 **Chat via Direct Message**: Expand functionality to allow AI chat interactions through Slack DMs.
+- [ ] 🔗 **Enhanced Connector Management**: Integrate more features for managing connectors via Slack, improving connectivity and control.
+
+
+
 [back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-black?style=flat-square
 
 ## 🔗 Links
