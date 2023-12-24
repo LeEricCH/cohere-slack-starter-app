@@ -61,7 +61,7 @@ SLACK_BOT_TOKEN=xoxb-xxxxx
 - [ ] 👍 **User Feedback Integration**: Enable users to provide direct feedback on chat responses, enhancing AI learning and accuracy.
 - [ ] 💬 **Chat via Direct Message**: Expand functionality to allow AI chat interactions through Slack DMs.
 - [ ] 🔗 **Enhanced Connector Management**: Integrate more features for managing connectors via Slack, improving connectivity and control.
-
+- [ ] 🚀 **Heroku Hosting Support**: Aim to make the project one-click deploy ready for easy Heroku hosting.
 
 
 [back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-black?style=flat-square
