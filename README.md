@@ -15,6 +15,8 @@ This project wraps https://github.com/slackapi/bolt-js. See official docs for de
 
 </div>
 
+> :warning: **Warning**: This project is currently under heavy development and is not yet production-ready. <br>Please use with caution and expect frequent updates and changes.
+
 
 ## ✨ Features
 
