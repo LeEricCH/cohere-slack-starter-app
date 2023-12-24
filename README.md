@@ -1,62 +1,78 @@
-# cohere-slack-starter-app
+<div align="center"><a name="readme-top"></a>
 
-: co:here / slack :<br/>
-::: starter app :::
+<h1>Cohere Slack Chat Bot</h1>
 
-## developing
+This project wraps https://github.com/slackapi/bolt-js. See official docs for details.
 
-this project wraps https://github.com/slackapi/bolt-js. see official docs for details.
+[![][github-contributors-shield]][github-contributors-link]
+[![][github-forks-shield]][github-forks-link]
+[![][github-stars-shield]][github-stars-link]
+[![][github-issues-shield]][github-issues-link]
+[![][github-license-shield]][github-license-link]
 
-### reactions
+[Changelog](./CHANGELOG.md) · [Report Bug][github-issues-link] · [Request Feature][github-issues-link]
 
-when reactions occur in channels that the app subscribes to, a threaded reply with co:here-powered content will be posted.
+![](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-to add a new reaction:
+</div>
 
-1. create a plugin under [`./plugins/reactions`](./plugins/reactions/).
-1. 🔧 update [`./app.js`](./app.js) to require the new plugin and add it to `reactionPlugins`
 
-see the following example plugins for reference:
+## ✨ Features
 
-| emoji       | description                                    |
-| ----------- | ---------------------------------------------- |
-| :cohere:    | health check to make sure the app is available |
-| :summarize: | summarize recent conversation in a channel     |
+- [x] 💨 **Enhanced Web-Assisted Chat**: Leverage the RAG (Retrieval-Augmented Generation) capability of the Cohere Chat Endpoint for precise, web-sourced responses, complete with cited sources, delivered with exceptional speed;
+- [x] 💎 **Efficient Thread Summarization**: Add an "eyes" emoji to any lengthy thread, and engage the OpenAI GPT-4 Chat endpoint for a concise and rapid summary;
+- [x] 🗣️ **Seamless Conversation Flow**: Within a thread, seamlessly pose follow-up questions. The Chat Bot maintains awareness of the thread's history, ensuring a coherent and continuous dialogue experience;
+- [x] 🌟 **Interactive UI with Slack Message Blocks** Utilize Slack Message Blocks for a dynamic UI, featuring a 'Regenerate' button for instant answer refresh and a dropdown for organized search results.
+## ✨ Demo
+https://github.com/LeEricCH/cohere-slack-starter-app/assets/75225859/1f437203-fe0c-4496-93cb-189191091ade
 
-### mentions
 
-when mentioned, the app will reply with co:here-powered responses.
+<div align="right">
 
-example mentions include:
+[![][back-to-top]](#readme-top)
 
-```slack
-@co ping
+</div>
+
+## ⌨️ Local Development
+You can clone it for local development:
+
+```bash
+$ git clone https://github.com/LeEricCH/cohere-slack-starter-app.git
+$ cd cohere-slack-starter-app
+$ yarn install
+$ yarn serve
 ```
 
-```slack
-@co summarize https://arxiv.org/abs/2202.12837
+Create an `.env` file with the following variables:
+```
+PORT=8000
+
+COHERE_API_TOKEN=xxxx
+OPENAI_API_KEY=sk-xxx
+
+SLACK_APP_TOKEN=xapp-xxxxx
+SLACK_BOT_TOKEN=xoxb-xxxxx
 ```
 
-to add a new mention:
+[back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-black?style=flat-square
 
-1. create a plugin under [`./plugins/reactions`](./plugins/mentions/).
-1. 🔧 update [`./app.js`](./app.js) to require the new plugin and add it to `mentionPlugins`
+## 🔗 Links
+### Credits
 
-see the [`summarize`](./plugins/mentions/summarize.js) example plugin for reference.
+- **cohere-samples** - <https://github.com/cohere-ai/samples>
 
-### serve
 
-```sh
-yarn serve
-```
-
-this project leverages `dotenv` to source secrets into the running environment. see `example.env` for required configuration.
-
-### test / debug
-
-```sh
-yarn test
-yarn test:watch
-```
-
-see [example tests](https://github.com/avajs/ava/blob/main/docs/01-writing-tests.md) and [assertions](https://github.com/avajs/ava/blob/main/docs/03-assertions.md).
+[github-release-shield]: https://img.shields.io/github/v/release/LeEricCH/cohere-slack-starter-app?color=369eff&labelColor=black&logo=github&style=flat-square
+[github-release-link]: https://github.com/LeEricCH/cohere-slack-starter-app/releases
+[github-releasedate-shield]: https://img.shields.io/github/release-date/LeEricCH/cohere-slack-starter-app?labelColor=black&style=flat-square
+[github-releasedate-link]: https://github.com/LeEricCH/cohere-slack-starter-app/releases
+[github-contributors-shield]: https://img.shields.io/github/contributors/LeEricCH/cohere-slack-starter-app?color=c4f042&labelColor=black&style=flat-square
+[github-contributors-link]: https://github.com/LeEricCH/cohere-slack-starter-app/graphs/contributors
+[github-forks-shield]: https://img.shields.io/github/forks/LeEricCH/cohere-slack-starter-app?color=8ae8ff&labelColor=black&style=flat-square
+[github-forks-link]: https://github.com/LeEricCH/cohere-slack-starter-app/network/members
+[github-stars-shield]: https://img.shields.io/github/stars/LeEricCH/cohere-slack-starter-app?color=ffcb47&labelColor=black&style=flat-square
+[github-stars-link]: https://github.com/LeEricCH/cohere-slack-starter-app/network/stargazers
+[github-issues-shield]: https://img.shields.io/github/issues/LeEricCH/cohere-slack-starter-app?color=ff80eb&labelColor=black&style=flat-square
+[github-issues-link]: https://github.com/LeEricCH/cohere-slack-starter-app/issues
+[github-license-shield]: https://img.shields.io/github/license/LeEricCH/cohere-slack-starter-app?color=white&labelColor=black&style=flat-square
+[github-license-link]: https://github.com/LeEricCH/cohere-slack-starter-app/blob/master/LICENSE
