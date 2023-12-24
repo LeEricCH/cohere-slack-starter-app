@@ -24,6 +24,16 @@ This project wraps https://github.com/slackapi/bolt-js. See official docs for de
 - [x] 💎 **Efficient Thread Summarization**: Add an "eyes" emoji to any lengthy thread, and engage the OpenAI GPT-4 Chat endpoint for a concise and rapid summary;
 - [x] 🗣️ **Seamless Conversation Flow**: Within a thread, seamlessly pose follow-up questions. The Chat Bot maintains awareness of the thread's history, ensuring a coherent and continuous dialogue experience;
 - [x] 🌟 **Interactive UI with Slack Message Blocks** Utilize Slack Message Blocks for a dynamic UI, featuring a 'Regenerate' button for instant answer refresh and a dropdown for organized search results.
+
+## Roadmap :world_map:
+
+- [ ] 📡 **Streaming Responses**: Implement real-time streaming for faster and more dynamic chat responses.
+- [ ] 👍 **User Feedback Integration**: Enable users to provide direct feedback on chat responses, enhancing AI learning and accuracy.
+- [ ] 💬 **Chat via Direct Message**: Expand functionality to allow AI chat interactions through Slack DMs.
+- [ ] 🔗 **Enhanced Connector Management**: Integrate more features for managing connectors via Slack, improving connectivity and control.
+- [ ] 🚀 **Heroku Hosting Support**: Aim to make the project one-click deploy ready for easy Heroku hosting.
+
+
 ## ✨ Demo
 https://github.com/LeEricCH/cohere-slack-starter-app/assets/75225859/1f437203-fe0c-4496-93cb-189191091ade
 
@@ -54,15 +64,6 @@ OPENAI_API_KEY=sk-xxx
 SLACK_APP_TOKEN=xapp-xxxxx
 SLACK_BOT_TOKEN=xoxb-xxxxx
 ```
-
-## Roadmap :world_map:
-
-- [ ] 📡 **Streaming Responses**: Implement real-time streaming for faster and more dynamic chat responses.
-- [ ] 👍 **User Feedback Integration**: Enable users to provide direct feedback on chat responses, enhancing AI learning and accuracy.
-- [ ] 💬 **Chat via Direct Message**: Expand functionality to allow AI chat interactions through Slack DMs.
-- [ ] 🔗 **Enhanced Connector Management**: Integrate more features for managing connectors via Slack, improving connectivity and control.
-- [ ] 🚀 **Heroku Hosting Support**: Aim to make the project one-click deploy ready for easy Heroku hosting.
-
 
 [back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-black?style=flat-square
 
