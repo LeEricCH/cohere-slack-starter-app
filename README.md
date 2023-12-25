@@ -15,7 +15,7 @@ This project wraps https://github.com/slackapi/bolt-js. See official docs for de
 
 </div>
 
-> :warning: **Warning**: This project is currently under heavy development and is not yet production-ready. <br>Please use with caution and expect frequent updates and changes.
+> :warning: **Warning**: This project is currently under development and is not yet production-ready. <br>Please use with caution and expect frequent updates and changes.
 
 
 ## ✨ Features
@@ -23,12 +23,13 @@ This project wraps https://github.com/slackapi/bolt-js. See official docs for de
 - [x] 💨 **Enhanced Web-Assisted Chat**: Leverage the RAG (Retrieval-Augmented Generation) capability of the Cohere Chat Endpoint for precise, web-sourced responses, complete with cited sources, delivered with exceptional speed;
 - [x] 💎 **Efficient Thread Summarization**: Add an "eyes" emoji to any lengthy thread, and engage the OpenAI GPT-4 Chat endpoint for a concise and rapid summary;
 - [x] 🗣️ **Seamless Conversation Flow**: Within a thread, seamlessly pose follow-up questions. The Chat Bot maintains awareness of the thread's history, ensuring a coherent and continuous dialogue experience;
-- [x] 🌟 **Interactive UI with Slack Message Blocks** Utilize Slack Message Blocks for a dynamic UI, featuring a 'Regenerate' button for instant answer refresh and a dropdown for organized search results.
+- [x] 🌟 **Interactive UI with Slack Message Blocks**: Utilize Slack Message Blocks for a dynamic UI, featuring a 'Regenerate' button for instant answer refresh and a dropdown for organized search results.
+- [X] 👍 **User Feedback**: Empower users to rate bot responses, refining AI performance with every interaction. It will post the Feedbacks in a seperate channel.
 
 ## Roadmap :world_map:
 
 - [ ] 📡 **Streaming Responses**: Implement real-time streaming for faster and more dynamic chat responses.
-- [ ] 👍 **User Feedback Integration**: Enable users to provide direct feedback on chat responses, enhancing AI learning and accuracy.
+- [X] 👍 **User Feedback Integration**: Enable users to provide direct feedback on chat responses, enhancing AI learning and accuracy.
 - [ ] 💬 **Chat via Direct Message**: Expand functionality to allow AI chat interactions through Slack DMs.
 - [ ] 🔗 **Enhanced Connector Management**: Integrate more features for managing connectors via Slack, improving connectivity and control.
 - [ ] 🚀 **Heroku Hosting Support**: Aim to make the project one-click deploy ready for easy Heroku hosting.
