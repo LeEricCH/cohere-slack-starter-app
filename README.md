@@ -38,6 +38,26 @@ This project wraps https://github.com/slackapi/bolt-js. See official docs for de
 ## ✨ Demo
 https://github.com/LeEricCH/cohere-slack-starter-app/assets/75225859/1f437203-fe0c-4496-93cb-189191091ade
 
+<table>
+  <tr>
+    <td align="center">
+      <h3>Response of AI</h3>
+      <p>The response is nicely formated with the sources if available.</p>
+      <img src="https://github.com/LeEricCH/cohere-slack-starter-app/assets/75225859/ee2f1543-3df5-44e9-8b49-8761148cf7a8" width="100%">
+    </td>
+    <td align="center">
+      <h3>Feedback Modal</h3>
+      <p>If the user dislikes the answer, he must enter improvement suggestions.</p>
+      <img src="https://github.com/LeEricCH/cohere-slack-starter-app/assets/75225859/6b1404c3-5457-4409-9f0a-bea36403b092" width="100%">
+    </td>
+    <td align="center">
+      <h3>Feedback message</h3>
+      <p>The feedback messages get stored in a seperate channel.</p>
+      <img src="https://github.com/LeEricCH/cohere-slack-starter-app/assets/75225859/cb401af0-fc73-4178-bc1d-ae87ea1709b4" width="100%">
+    </td>
+  </tr>
+</table>
+
 
 <div align="right">
 
