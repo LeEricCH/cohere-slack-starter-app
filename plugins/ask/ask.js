@@ -31,11 +31,16 @@ class AskPlugin {
       // Get the conversation history for the thread
       const history = await AskPlugin.getThreadHistory(client, command.channel_id, thread_ts);
 
+      // Exclude the last message (user's query) from the history if it's not a regeneration
+      const filteredHistory = isRegeneration ? history : history.slice(0, -1);
+
       // Format the chat_history for the Cohere API
-      const chat_history = history.map((msg) => ({
+      const chat_history = filteredHistory.map(msg => ({
         role: msg.user === command.user_id ? 'USER' : 'ASSISTANT',
         message: msg.text,
       }));
+
+      console.log(chat_history);
 
       // Initialize the connectors array
       const connectors = [{ id: "web-search" }];
@@ -163,7 +168,7 @@ class AskPlugin {
       await client.chat.update({
         channel: command.channel_id,
         ts: loadingMessageTs,
-        text: 'Response:', // Fallback text for notifications and environments without blocks
+        text: response.data.text, // Fallback text for notifications and environments without blocks
         blocks: validBlocks,
         mrkdwn: true,
       });
@@ -174,7 +179,7 @@ class AskPlugin {
       await client.chat.update({
         channel: command.channel_id,
         ts: loadingMessageTs, // Timestamp of the loading message
-        text: "Sorry, I encountered an error while generating a response.",
+        text: "Sorry, I encountered an error while generating a response. (Error: " + error.message + ")",
       });
     }
   }

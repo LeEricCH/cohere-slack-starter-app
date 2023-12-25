@@ -118,7 +118,7 @@ class CohereSlackApp {
             type: "section",
             text: {
               type: "mrkdwn",
-              text: `:mag: *<${document.url}|${document.title}>*`
+              text: document.url ? `:mag: *<${document.url}|${document.title}>*` : `:mag: *${document.title}*`
             }
           },
           {
@@ -267,22 +267,14 @@ registerMessageReplies() {
    * 🔧 require a plugin and add it to `reactionPlugins`
    */
   registerReactionPlugins() {
+    const { SummarizePlugin } = require("./plugins/reactions/summarize");
+  
     this.app.event("reaction_added", async ({ event, client }) => {
       console.info(event);
-
-      // Check the name of the reaction to determine the plugin to execute
-      // if (event.reaction === SummarizePlugin.name) {
-      //   // Execute the SummarizePlugin if the reaction matches
-      //   const response = await SummarizePlugin.exec(event, client);
-      //   // Send the summary as an ephemeral message to the user who reacted
-      //   // await client.chat.postEphemeral({
-      //   //   channel: event.item.channel,
-      //   //   thread_ts: event.item.ts,
-      //   //   user: event.user,
-      //   //   text: response
-      //   // });
-      //   // Optionally, remove the reaction after processing
-      // }
+  
+      if (event.reaction === SummarizePlugin.name) {
+        await SummarizePlugin.exec(event, client);
+      }
     });
   }
 
