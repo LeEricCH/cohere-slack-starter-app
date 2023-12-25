@@ -36,8 +36,6 @@ This project wraps https://github.com/slackapi/bolt-js. See official docs for de
 
 
 ## ✨ Demo
-https://github.com/LeEricCH/cohere-slack-starter-app/assets/75225859/1f437203-fe0c-4496-93cb-189191091ade
-
 <table>
   <tr>
     <td align="center">
@@ -57,6 +55,8 @@ https://github.com/LeEricCH/cohere-slack-starter-app/assets/75225859/1f437203-fe
     </td>
   </tr>
 </table>
+https://github.com/LeEricCH/cohere-slack-starter-app/assets/75225859/1f437203-fe0c-4496-93cb-189191091ade
+
 
 
 <div align="right">
