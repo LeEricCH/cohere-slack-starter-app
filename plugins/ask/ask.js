@@ -83,7 +83,7 @@ class AskPlugin {
       }
 
       // Format the message with markdown (if needed)
-      const formattedMessageText = `*Response:*\n${response.data.text}`;
+      const formattedMessageText = `${response.data.text}`;
 
     // Extract search queries and results (if any) from the Cohere response
     let searchResultsSection;
@@ -118,7 +118,7 @@ class AskPlugin {
           type: "static_select",
           placeholder: {
             type: "plain_text",
-            text: "Select documents",
+            text: "Results...",
           },
           options: documentOptions,
           action_id: "view_document_details",
@@ -145,10 +145,11 @@ class AskPlugin {
       blocks.push(searchResultsSection);
     }
 
-    // Always include the Regenerate button
+    // Always include the Regenerate button and Like/Dislike buttons
     blocks.push({
       "type": "actions",
       "elements": [
+        // Existing Regenerate button
         {
           "type": "button",
           "text": {
@@ -157,6 +158,57 @@ class AskPlugin {
           },
           "value": "regenerate",
           "action_id": "regenerate_response"
+        },
+        // Like button
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "emoji": true,
+            "text": ":thumbsup:" // Use an emoji or text for the Like button
+          },
+          "value": "like",
+          "action_id": "like_response"
+        },
+        // Dislike button
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "emoji": true,
+            "text": ":thumbsdown:" // Use an emoji or text for the Dislike button
+          },
+          "value": "dislike",
+          "action_id": "dislike_response"
+        },
+            // Overflow menu
+        {
+          "type": "overflow",
+          "options": [
+            {
+              "text": {
+                "type": "plain_text",
+                "text": "META VALUES BELOW",
+                "emoji": true
+              },
+              "value": "ignore"
+            },
+            {
+              "text": {
+                "type": "plain_text",
+                "text": "Query: " + command.text
+              },
+              "value": `query:${command.text}` // Store the user's query in the value
+            },
+            {
+              "text": {
+                "type": "plain_text",
+                "text": "Asked by <@" + command.user_id + ">"
+              },
+              "value": `user:${command.user_id}` // Store the user ID in the value
+            }
+          ],
+          "action_id": "store_query_and_user"
         }
       ]
     });
