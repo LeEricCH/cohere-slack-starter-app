@@ -31,7 +31,8 @@ const registerMentionPlugins = (app) => {
 
 const registerReactionPlugins = (app) => {
   const reactionPlugins = {
-    'summarize': SummarizePlugin,
+    'eyes': SummarizePlugin,
+    // 'emoji_name': PluginClass,
     // Add more reaction plugins here
   };
 
