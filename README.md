@@ -47,8 +47,6 @@ This project wraps https://github.com/slackapi/bolt-js. See official docs for de
       <h3>Feedback</h3>
       <p>If the user dislikes the answer, he must enter improvement suggestions. The feedback messages get stored in a separate channel.</p>
       <br>
-      <br>
-      <br>
       <img src="https://github.com/LeEricCH/cohere-slack-starter-app/assets/75225859/142f0eec-1331-4273-81e1-dc18380140b7" width="80%">
       <img src="https://github.com/LeEricCH/cohere-slack-starter-app/assets/75225859/cb401af0-fc73-4178-bc1d-ae87ea1709b4" width="80%">
     </td>
